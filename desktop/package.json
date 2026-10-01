@@ -1,0 +1,10 @@
+{
+  "name":"clipwithpaho-desktop",
+  "version":"2.0.0",
+  "description":"ClipWithPaho local clipping app",
+  "main":"main.js",
+  "author":"ClipWithPaho",
+  "license":"MIT",
+  "scripts":{"start":"electron ."},
+  "dependencies":{"electron":"^38.2.0"}
+}

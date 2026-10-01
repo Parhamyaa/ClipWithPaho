@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ClipWithPaho</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="side-top">
+      <div class="mini-brand">CP</div>
+      <div class="duration-title">CLIP-LÄNGE</div>
+      <div class="duration-grid">
+        <button data-sec="15">15s</button>
+        <button data-sec="30" class="selected">30s</button>
+        <button data-sec="60">60s</button>
+        <button data-sec="120">2m</button>
+        <button data-sec="300">5m</button>
+      </div>
+    </div>
+
+    <nav>
+      <button class="nav active" data-page="home"><span>⌂</span> Home</button>
+      <button class="nav" data-page="clips"><span>▣</span> Clips</button>
+      <button class="nav" data-page="settings"><span>⚙</span> Einstellungen</button>
+    </nav>
+
+    <div class="side-bottom">
+      <div class="hotkey-mini"><span>CLIP</span><b id="hotkeyMini">CTRL + SHIFT + X</b></div>
+      <button class="quit" id="quit">Beenden</button>
+    </div>
+  </aside>
+
+  <section class="workspace">
+    <header class="topbar">
+      <div class="top-left"><span class="dot" id="dot"></span><span id="topStatus">BEREIT</span></div>
+      <div class="brand">ClipWithPaho</div>
+      <button class="top-action" id="clipNow">CLIP</button>
+    </header>
+
+    <main>
+      <section class="page" id="homePage">
+        <div class="welcome">
+          <div>
+            <div class="overline">LOCAL CLIPPER</div>
+            <h1>Deine besten<br><span>Momente.</span></h1>
+            <p>Kein Account. Kein Login. Einfach aufnehmen und mit einem Tastendruck clippen.</p>
+          </div>
+          <div class="status-card">
+            <div class="status-head"><b>REPLAY BUFFER</b><span id="recordLabel">OFF</span></div>
+            <div class="big-time" id="bigTime">00:00</div>
+            <button class="start-btn" id="start">Aufnahme starten</button>
+          </div>
+        </div>
+
+        <div class="section-head">
+          <div><div class="overline">CAPTURE</div><h2>Quelle auswählen</h2></div>
+          <button class="small-btn" id="refresh">Aktualisieren</button>
+        </div>
+        <div class="sources" id="sources"></div>
+
+        <div class="tip">Drücke <b id="hotkeyTip">CTRL + SHIFT + X</b>, um jederzeit einen Clip zu speichern.</div>
+      </section>
+
+      <section class="page hidden" id="clipsPage">
+        <div class="page-title"><div class="overline">LIBRARY</div><h1>Clips</h1></div>
+        <div class="empty" id="clipGrid"></div>
+      </section>
+
+      <section class="page hidden" id="settingsPage">
+        <div class="page-title"><div class="overline">SETTINGS</div><h1>Einstellungen</h1></div>
+        <div class="settings-card">
+          <label>Globaler Hotkey</label>
+          <p>Der Hotkey funktioniert auch während dein Spiel im Vordergrund ist.</p>
+          <div class="hotkey-row"><input id="hotkeyInput" value="Ctrl+Shift+X"><button id="saveHotkey">Speichern</button></div>
+        </div>
+        <div class="settings-card">
+          <label>Clip-Länge</label>
+          <p>Du kannst die Clip-Länge jederzeit links auswählen.</p>
+          <div class="setting-value" id="settingDuration">30 Sekunden</div>
+        </div>
+        <div class="settings-card">
+          <label>Speicherung</label>
+          <p>Clips werden lokal auf deinem Computer erzeugt. Es ist kein Account erforderlich.</p>
+        </div>
+      </section>
+    </main>
+  </section>
+
+  <div class="toast hidden" id="toast"><div class="toast-icon">✓</div><div><b>Clip gespeichert</b><span id="toastText">30 Sekunden</span></div></div>
+</div>
+<script src="renderer.js"></script>
+</body>
+</html>

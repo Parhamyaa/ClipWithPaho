@@ -1,0 +1,29 @@
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#000;color:#f4f4f4;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+.sitebar{height:72px;border-bottom:1px solid #171717;display:flex;align-items:center;justify-content:space-between;padding:0 34px;position:sticky;top:0;background:#000;z-index:5}
+.site-logo{font-weight:900;letter-spacing:-.04em}
+.download,.cta{border:1px solid #303030;border-radius:9px;padding:10px 15px;color:#fff;text-decoration:none;font-weight:750}
+.download:hover,.cta:hover{background:#fff;color:#000}
+main{max-width:1200px;margin:auto;padding:0 28px}
+.hero{min-height:760px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:80px}
+.label{font-size:10px;letter-spacing:.22em;font-weight:900;color:#777}
+h1{font-size:clamp(64px,9vw,118px);letter-spacing:-.08em;line-height:.85;margin:20px 0}
+.hero p{color:#888;font-size:19px;margin-bottom:30px}
+.cta{display:inline-block;background:#fff;color:#000;border-color:#fff}
+.mock{border:1px solid #242424;background:#050505;border-radius:18px;height:520px;overflow:hidden;box-shadow:0 30px 100px #000}
+.mock-top{height:52px;border-bottom:1px solid #1b1b1b;display:flex;align-items:center;justify-content:center;font-weight:900}
+.mock-top i{position:absolute;margin-left:470px;width:7px;height:7px;background:#fff;border-radius:50%}
+.mock-body{display:flex;height:calc(100% - 52px)}
+.mock-body aside{width:130px;border-right:1px solid #1b1b1b;padding:22px 14px}
+.mock-body aside b{display:block;color:#555;font-size:10px;padding:12px 8px}
+.mock-content{padding:25px;flex:1}
+.mock-content small{color:#666;font-weight:900;font-size:10px;letter-spacing:.15em}
+.mock-card{height:135px;border:1px solid #1c1c1c;background:linear-gradient(135deg,#0b0b0b,#020202);border-radius:11px;margin-top:16px}
+.features{border-top:1px solid #171717;border-bottom:1px solid #171717;display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding:70px 0}
+.features b{display:block;margin-bottom:8px}
+.features span{color:#777;line-height:1.5}
+.download-section{padding:120px 0}
+h2{font-size:52px;letter-spacing:-.06em;margin:12px 0}
+.download-section p{color:#777}
+@media(max-width:800px){.hero{grid-template-columns:1fr;min-height:auto;padding:90px 0}.mock{height:400px}.features{grid-template-columns:1fr}.sitebar{padding:0 18px}}
